@@ -342,56 +342,16 @@
 
     // Sample word dictionary - replace with your own
     const WORDS = [
-        'the','be','to','of','and','a','in','that','have','i','it','for','not','on','with','he','as','you','do','at',
-        'this','but','his','by','from','they','we','say','her','she','or','an','will','my','one','all','would','there','their','what',
-        'so','up','out','if','about','who','get','which','go','me','when','make','can','like','time','no','just','him','know','take',
-        'people','into','year','your','good','some','could','them','see','other','than','then','now','look','only','come','its','over','think','also',
-        'back','after','use','two','how','our','work','first','well','way','even','new','want','because','any','these','give','day','most','us',
-
-        'is','are','was','were','been','being','has','had','did','does','doing','having','might','must','shall','should','may','let','keep','help',
-        'feel','try','leave','call','put','mean','keep','let','begin','seem','talk','turn','start','show','hear','play','run','move','live','believe',
-        'bring','happen','write','provide','sit','stand','lose','pay','meet','include','continue','set','learn','change','lead','understand','watch','follow','stop','create',
-
-        'world','school','state','family','student','group','country','problem','hand','part','place','case','week','company','system','program','question','work','government','number',
-        'night','point','home','water','room','mother','area','money','story','fact','month','lot','right','study','book','eye','job','word','business','issue',
-        'side','kind','head','house','service','friend','father','power','hour','game','line','end','member','law','car','city','community','name','president','team',
-
-        'minute','idea','kid','body','information','back','parent','face','others','level','office','door','health','person','art','war','history','party','result','change',
-        'morning','reason','research','girl','guy','moment','air','teacher','force','education','foot','boy','age','policy','process','music','market','sense','nation','plan',
-
-        'college','interest','death','experience','effect','use','class','control','care','field','development','role','effort','rate','heart','drug','show','leader','light','voice',
-        'wife','police','mind','price','report','decision','son','view','relationship','town','road','arm','difference','value','building','action','model','season','society','tax',
-
-        'director','position','player','record','paper','space','ground','form','event','official','matter','center','couple','site','project','activity','star','table','need','court',
-        'oil','situation','cost','industry','figure','street','image','phone','data','picture','practice','piece','land','product','doctor','wall','patient','worker','news','test',
-
-        'movie','north','love','support','technology','step','baby','computer','type','attention','film','tree','source','organization','hair','look','century','evidence','window','culture',
-        'chance','brother','energy','period','course','summer','plant','opportunity','term','letter','condition','choice','rule','south','floor','campaign','material','population','economy','medical',
-
-        'bank','church','risk','fire','future','security','truth','goal','growth','income','key','purpose','shape','strategy','trade','training','unit','weather','weight','youth',
-
-        'able','above','accept','across','act','active','actual','add','address','adult','affect','after','again','against','agree','ahead','allow','almost','alone','along',
-        'already','although','always','amount','analysis','animal','answer','appear','apply','approach','area','argue','around','arrive','article','artist','assume','attack','avoid','away',
-
-        'balance','base','beat','beautiful','become','before','begin','behavior','behind','benefit','better','between','beyond','bill','black','blood','blue','board','break','budget',
-
-        'build','buyer','camera','capital','career','carry','catch','cause','cell','center','central','certain','certainly','challenge','character','charge','check','child','choice','choose',
-
-        'church','citizen','civil','claim','clear','clearly','close','coach','cold','collection','color','commercial','common','community','compare','complete','computer','concern','condition','conference',
-
-        'consider','consumer','contain','continue','control','cost','cover','create','crime','cultural','culture','current','customer','dark','data','daughter','dead','deal','debate','decide',
-
-        'decision','deep','defense','degree','design','detail','determine','develop','difference','difficult','direction','director','discover','discuss','discussion','disease','doctor','dog','door','down',
-
-        'draw','dream','drive','drop','drug','during','each','early','east','easy','economic','education','effect','effort','eight','either','election','else','employee','end',
-
-        'energy','enjoy','enough','enter','entire','environment','especially','establish','evening','event','ever','every','exactly','example','executive','exist','expect','experience','expert','explain',
-
-        'face','fact','factor','fail','fall','family','fast','father','fear','federal','feel','feeling','field','fight','figure','fill','final','finally','financial','find',
-
-        'fine','finger','finish','fire','firm','first','fish','five','floor','focus','follow','food','foot','force','foreign','forget','form','former','forward','four',
-
-        'free','friend','front','full','fund','future'
+      'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'I',
+      'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at',
+      'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she',
+      'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what',
+      'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me',
+      'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take',
+      'people', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other',
+      'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think', 'also',
+      'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well', 'way',
+      'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most', 'us'
     ];
 
     let words = [];
@@ -491,6 +451,8 @@
       document.getElementById('liveStats').style.display = 'none';
       document.getElementById('wordsContainer').style.display = 'none';
       document.getElementById('timeOptions').style.display = 'none';
+      document.getElementById('timer').style.display = 'none';
+      document.querySelector('.controls').style.display = 'none';
     }
 
     function calculateStats() {
@@ -530,6 +492,8 @@
       document.getElementById('liveStats').style.display = 'flex';
       document.getElementById('wordsContainer').style.display = 'flex';
       document.getElementById('timeOptions').style.display = 'flex';
+      document.getElementById('timer').style.display = 'block';
+      document.querySelector('.controls').style.display = 'flex';
       
       generateWords();
     }
